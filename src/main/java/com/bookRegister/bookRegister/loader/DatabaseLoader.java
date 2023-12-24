@@ -13,7 +13,7 @@ public class DatabaseLoader implements CommandLineRunner {
     public DatabaseLoader(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
-
+    //load initial data to test 
     @Override
     public void run(String... args) {
         if (customerRepository.count() == 0) {

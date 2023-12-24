@@ -1,9 +1,11 @@
-package com.bookRegister.validationService;
+package com.bookRegister.bookRegister.validation;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bookRegister.bookRegister.DTO.BookDTO;
+import org.springframework.stereotype.Component;
 
+import com.bookRegister.bookRegister.DTO.BookDTO;
+@Component
 public class ValidationService {
     public ValidationResult validateBook(BookDTO book) {
         List<String> errors = new ArrayList<>();

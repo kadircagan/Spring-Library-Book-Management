@@ -1,4 +1,4 @@
-package com.bookRegister.validationService;
+package com.bookRegister.bookRegister.validation;
 
 import java.util.List;
 

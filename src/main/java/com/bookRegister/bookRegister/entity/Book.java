@@ -11,39 +11,21 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 
 @Entity
 public class Book {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
-	
-    @NotBlank(message = "Name cannot be blank")
-    @Size(min = 2, message = "Name should be at least 2 characters")
-	private String name;
-    
-    @NotBlank(message = "Author cannot be blank")
+	private int id;    
+	private String name;  
 	private String author;
-    
-    @NotNull(message = "Price cannot be null")
-    @Min(value = 1, message = "Price cannot be negative")
+
 	private int price;
-	
-    @NotNull(message = "Page size cannot be null")
-    @Min(value = 1, message = "Page size should be at least 1")
-	private int pageSize;
-    
+	private int pageSize;    
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer borrowedCustomer;
-    
-	
-
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
     

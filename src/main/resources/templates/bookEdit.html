@@ -42,7 +42,7 @@
 	
 	<div class="container-sm">
 	<div class = "container d-flex justify-content-center">
-		<form th:action = "@{/update}" method = "post" th:object = "${book}">
+		<form th:action = "@{/update}" method = "put" th:object = "${book}">
 		  <input type="hidden" name="id" th:value="${book.id}"/>
 		  <div class="mb-3">
 		    <label for="name" class="form-label">Name </label>
@@ -77,7 +77,7 @@
     event.preventDefault(); 
 
     fetch('/update', {
-      method: 'POST',
+      method: 'PUT',
       body: new FormData(this),
     })
     .then(response => {
