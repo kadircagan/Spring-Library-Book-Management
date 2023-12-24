@@ -10,7 +10,7 @@ import com.bookRegister.bookRegister.response.DefaultMessageResponse;
 
 @ControllerAdvice
 public class ControllerExceptionHandler {
-
+	//it is a general exception for controller but in our case only used for customer exception
     @ExceptionHandler(CustomerException.class)
     public final ResponseEntity<DefaultMessageResponse> handleKFBusinessException(
     		CustomerException ex) {
