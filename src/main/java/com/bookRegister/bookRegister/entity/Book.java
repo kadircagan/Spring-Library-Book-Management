@@ -29,7 +29,7 @@ public class Book {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
     
-	private Book(){}
+	public Book(){}
 	
 	public Book(String name, String author, int price,int pageSize) {
 		super();

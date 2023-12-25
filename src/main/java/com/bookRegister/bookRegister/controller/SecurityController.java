@@ -9,7 +9,7 @@ public class SecurityController {
 
  
 
-    @RequestMapping("/login.html")
+  @RequestMapping("/login.html")
   public String login() {
     return "login.html";
   }

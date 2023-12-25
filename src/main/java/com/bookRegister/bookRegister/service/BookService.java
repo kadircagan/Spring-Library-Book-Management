@@ -18,16 +18,17 @@ import jakarta.validation.Valid;
 @Service
 public class BookService{
 	
-	@Autowired
+	//@Autowired
 	private BookRepository bookRepo;
 	
 	//Constructor injection example
 	private final CustomerService customerService;	
     private final ValidationService validationService;
 	
-	private BookService(ValidationService validationService ,CustomerService customerService) {
+	private BookService(ValidationService validationService ,CustomerService customerService,BookRepository bookRepo) {
 		this.validationService =  validationService;
 		this.customerService = customerService;
+		this.bookRepo = bookRepo;
 	}
 
 	public List<Book> getAllBooks() {

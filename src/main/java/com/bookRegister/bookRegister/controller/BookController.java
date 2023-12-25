@@ -58,7 +58,7 @@ public class BookController {
    	}
     
     @PostMapping("/save")
-    public ResponseEntity<String> registerBook(@Valid @ModelAttribute BookDTO bookDTO) {
+    public ResponseEntity<String> saveBook(@Valid @ModelAttribute BookDTO bookDTO) {
         return bookService.saveBook(bookDTO);
     }
     
